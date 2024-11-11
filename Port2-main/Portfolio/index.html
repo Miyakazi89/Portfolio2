@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Position Example</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            position: relative;
+            top: 20px; /* Moves the box 20px down */
+            left: 30px; /* Moves the box 30px to the right */
+            transition: width 2s;
+            transition-timing-function: linear;
+         
+         }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+            position: absolute;
+            top: 50px; /* Moves the box 50px down from the top of the container */
+            left: 60px; /* Moves the box 60px from the left side of the container */
+           
+        }
+        .box2:hover{
+            color:red;
+            width:300px;
+           
+        }
+        h1{
+            text-shadow: 0px -5px 5px grey;
+            text-align: center;
+            margin-top: 200px;
+             
+        }
+        .boc{
+            width:100px;
+            height: 100px;
+            background-color: brown;
+            margin-top:100px;
+            text-align: center;
+            font-size: 40px;
+            animation: myslide;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;/*it's not going to stop*/
+            
+        }
+     
+        @keyframes myslide{
+            from{
+ margin-left: 0%;
+            }
+            to{
+margin-right: 100%;
+            }
+        }
+
+        @keyframes rootate{
+         100%{
+            transform: rotateX('380deg');
+         }
+        }
+h1{
+    transition: width 2s, height 2s, transform 2s; 
+     
+    transition-timing-function: ease-in-out;
+}
+h1:hover{
+  transform: rotate(360deg);
+
+}
+
+
+.skills-section {
+    text-align: center;
+    padding: 40px 20px; /* Add padding for spacing */
+    background-color: #121212; /* Dark background color */
+    color: #ffffff; /* White text color */
+}
+
+.skills-title {
+    font-size: 2.5em; /* Adjust font size */
+    font-weight: bold;
+    color: #ffffff; /* White text color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.skills-description {
+    max-width: 600px; /* Set a max width for readability */
+    margin: 0 auto; /* Center the paragraph */
+    font-size: 1em; /* Adjust font size */
+    color: #b0b0b0; /* Slightly lighter color for the paragraph text */
+    line-height: 1.5; /* Space between lines for readability */
+
+    .skills-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.skill-pair {
+    display: flex;
+    justify-content: space-around;
+    width: 80%; /* Adjust width as needed */
+    margin-bottom: 20px; /* Space between rows */
+}
+
+.skill {
+    text-align: center;
+    width: 45%; /* Each skill takes up half of the row */
+}
+
+.progress-bar {
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 10px;
+    margin-top: 5px;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ff007f, #ff8c00); /* Gradient color */
+}
+
+/* Adjust progress widths for each skill */
+.html { width: 80%; }
+.css { width: 75%; }
+.javascript { width: 70%; }
+.java { width: 60%; }
+
+.worklist {
+    display: flex;
+    justify-content: space-between; /* Space images evenly */
+ /* Center align images vertically if they have different heights */
+    gap: 20px; /* Space between images */
+}
+
+.work {
+    flex: 1; /* Ensures images take equal space */
+    max-width: 200px; /* Limit width of each image container */
+}
+
+.work img {
+    width: 100%; /* Make images responsive within their container */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: shadow effect */
+}
+
+}
+
+     </style>
+</head>
+<body>
+    <h1 id="heading">Welcome to My Practice</h1>
+ 
+    <div class="box">
+        <div class="box2">Hi</div>
+    </div>
+ 
+    <div class="boc">Hello</div>
+
+    <div class="skills-section">
+        <h2 class="skills-title">My Skills</h2>
+        <p class="skills-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod ab laudantium possimus 
+            molestias sapiente, saepe facilis dolore autem repellat, quo iure tempore nisi 
+            perspiciatis. Quasi?
+        </p>
+    </div>
+
+    <div class="skills-section">
+        <div class="skill-pair">
+            <div class="skill">
+                <p>HTML</p>
+                <div class="progress-bar">
+                    <div class="progress html"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>CSS</p>
+                <div class="progress-bar">
+                    <div class="progress css"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="skill-pair">
+            <div class="skill">
+                <p>JavaScript</p>
+                <div class="progress-bar">
+                    <div class="progress javascript"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>Java</p>
+                <div class="progress-bar">
+                    <div class="progress java"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="projects">
+        <div class="container">
+            <h2 class="titlee">My Work</h2>
+            <div class-="worklist">
+                <div class="work">
+                    <img src="images/workimage.jfif" alt="work 1">
+                </div>
+                <div class="work">
+                    <img src="images/OIP (2).jfif" alt="work 1">
+                </div>
+                <div class="work">
+                    <img src="images/workimage.jfif" alt="work 1">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+</body>
+</html>
